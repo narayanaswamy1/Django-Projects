@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <title>Employee Database Form</title>
+</head>
+<body>
+  <!-- <div class="container" align="center">
+    <form class="" action="/emp" method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="submit" class="btn btn-primary" value="Submit" ></input>
+    </form>
+  </div> -->
+
+  <form method="POST" class="post-form" action="/emp">
+    {% csrf_token %}
+    <div class="container">
+      <br>
+      <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+          <h3>Personal Details</h3>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Id:</label>
+        <div class="col-sm-4">
+          {{ form.empId }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Name:</label>
+        <div class="col-sm-4">
+          {{ form.empName }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Father's Name:</label>
+        <div class="col-sm-4">
+          {{ form.fatherName }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Mother's Name:</label>
+        <div class="col-sm-4">
+          {{ form.motherName }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Blood Group:</label>
+        <div class="col-sm-4">
+          {{ form.bloodGroup }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Date of Birth:</label>
+        <div class="col-sm-4">
+          {{ form.dateOfBirth }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Sex:</label>
+        <div class="col-sm-4">
+          {{ form.sex }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Marital Status:</label>
+        <div class="col-sm-4">
+          {{ form.maritalStatus }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Spouse Name:</label>
+        <div class="col-sm-4">
+          {{ form.spouseName }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Designation:</label>
+        <div class="col-sm-4">
+          {{ form.designation }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Emergency Contact:</label>
+        <div class="col-sm-4">
+          {{ form.emergencyContact }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Permanent Address:</label>
+        <div class="col-sm-4">
+          {{ form.permanentAdd }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Present Address:</label>
+        <div class="col-sm-4">
+          {{ form.presentAdd }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Email ID:</label>
+        <div class="col-sm-4">
+          {{ form.empEmail }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Mobile:</label>
+        <div class="col-sm-4">
+          {{ form.empContact }}
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</body>
+</html>

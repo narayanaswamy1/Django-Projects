@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <title>Index</title>
+  <!-- {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/> -->
+</head>
+<body>
+  <form method="POST" class="post-form" action="/update/{{employee.id}}">
+    {% csrf_token %}
+    <div class="container">
+      <br>
+      <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+          <h3>Update Details</h3>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Id:</label>
+        <div class="col-sm-4">
+          <input type="text" name="empId" id="id_eid" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Name:</label>
+        <div class="col-sm-4">
+          <input type="text" name="empName" id="id_ename" required maxlength="100" value="{{ employee.empName }}" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Father's Name:</label>
+        <div class="col-sm-4">
+          <input type="text" name="fatherName" id="id_efatherName" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Mother's Name:</label>
+        <div class="col-sm-4">
+          <input type="text" name="motherName" id="id_emotherName" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Blood Group:</label>
+        <div class="col-sm-4">
+          <input type="text" name="bloodGroup" id="id_ebloodGroup" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Date of Birth:</label>
+        <div class="col-sm-4">
+          <input type="text" name="dateOfBirth" id="id_edateOfBirth" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Sex:</label>
+        <div class="col-sm-4">
+          <input type="text" name="sex" id="id_esex" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Marital Status:</label>
+        <div class="col-sm-4">
+          <input type="text" name="maritalStatus" id="id_emaritalStatus" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Spouse Name:</label>
+        <div class="col-sm-4">
+          <input type="text" name="spouseName" id="id_espouseName" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Id:</label>
+        <div class="col-sm-4">
+          <input type="text" name="empId" id="id_eid" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">designation:</label>
+        <div class="col-sm-4">
+          <input type="text" name="designation" id="id_edesignation" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Emergency Contact:</label>
+        <div class="col-sm-4">
+          <input type="text" name="emergencyContact" id="id_eemergencyContact" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Permanent Address:</label>
+        <div class="col-sm-4">
+          <input type="text" name="permanentAdd" id="id_epermanentAdd" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Present Address:</label>
+        <div class="col-sm-4">
+          <input type="text" name="presentAdd" id="id_epresentAdd" required maxlength="20" value="{{ employee.empId }}"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Email:</label>
+        <div class="col-sm-4">
+          <input type="email" name="empEmail" id="id_eemail" required maxlength="254" value="{{ employee.empEmail }}" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Employee Contact:</label>
+        <div class="col-sm-4">
+          <input type="text" name="empContact" id="id_econtact" required maxlength="15" value="{{ employee.empContact }}" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-1 col-form-label"></label>
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-success">Update</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
